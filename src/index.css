@@ -1,3 +1,5 @@
+@import './styles/reset.css';
+
 @font-face {
     font-family: "Jura";
     src: url("/fonts/Jura/Jura-Bold.woff2") format("woff2"),
@@ -58,7 +60,6 @@
     --color-btn-hover: #ECECEC;
     --color-black: #141414;
     --color-white: #FFFFFF;
-
 }
 
 html {
@@ -68,7 +69,70 @@ html {
 body {
     height: 100%;
     background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-base);
     margin: 0;
     padding: 0;
 }
 
+.container {
+    width: 100%;
+    max-width: 100%;  
+    margin: 0 auto;      
+    padding: 0 20px;      
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 170px;
+}
+
+a
+
+button {
+    font-family: var(--font-base);
+    cursor: pointer;
+    border: 1px solid var(--color-btn);
+    background-color: var(--color-btn);
+    color: var(--color-white);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--color-btn);
+}
+
+
+
+
+/* Медиазапрос для экранов с шириной больше 1200px */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px; 
+        padding: 0 30px;  
+    }
+}
+
+/* Медиазапрос для экранов с шириной больше 1600px */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px; 
+        padding: 0 40px;   
+    }
+}
+
+/* Медиазапрос для экранов с шириной меньше 768px (планшеты) */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 15px;   
+    }
+}
+
+/* Медиазапрос для экранов с шириной меньше 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;   
+    }
+}

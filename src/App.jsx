@@ -3,7 +3,7 @@ import React from 'react';
 // Импорт компонентов
 // import Header from './components/Header/Header';
 // import Banner from './components/Banner/Banner';
-// import AboutMe from './components/About/About';
+import { About } from './components/About/About';
 // import WhyChooseMe from './components/WhyChoose/WhyChoose';
 // import Portfolio from './components/Portfolio/Portfolio';
 // import Price from './components/Price/Price';
@@ -16,9 +16,9 @@ function App() {
     return (
         <div className="App">
             {/* <Header />
-            <Banner />
-            <AboutMe />
-            <WhyChooseMe />
+            <Banner /> */}
+            <About />
+            {/* <WhyChooseMe />
             <Portfolio />
             <Price />
             <Sterilization />

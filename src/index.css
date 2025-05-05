@@ -73,7 +73,7 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-base);
-    font-size: 20px;
+    font-size: clamp(16px, 1.67vw, 32px);
     font-weight: var(--font-weight-regular);
     margin: 0;
     padding: 0;
@@ -111,7 +111,6 @@ h1, h2, h3, h4, h5 {
     font-weight: var(--font-weight-bold);
     font-size: clamp(24px, 2.6vw, 50px);
 }
-
 
 
 /* Медиазапрос для экранов с шириной больше 1200px */

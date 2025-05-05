@@ -1,9 +1,11 @@
 .contentWrapper {
     display: flex;
-    gap: 40px;
+    gap: 80px;
 }
 
-
+.aboutTitle {
+    margin-bottom: 90px;
+}
 
 .aboutImage {
     width: 100%;
@@ -15,6 +17,7 @@
 }
 
 .benefitsList {
+    width: 60%;
     list-style-type: disc;
     display: flex;
     flex-direction: column;

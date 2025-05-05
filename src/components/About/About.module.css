@@ -3,14 +3,10 @@
     gap: 80px;
 }
 
-.aboutTitle {
-    margin-bottom: 90px;
-}
-
 .aboutImage {
     width: 100%;
     height: auto;
-    max-width: 662px;
+    max-width: 776px;
     border-radius: 20px;
     object-fit: cover;
     
@@ -18,9 +14,47 @@
 
 .benefitsList {
     width: 60%;
-    list-style-type: disc;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.benefitsList li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.benefitsList li::before {
+    content: '•';
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+@media (max-width: 1199px) {
+    .contentWrapper {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contentWrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .imageWrapper {
+        width: 100%;
+    }
+    .benefitsList {
+        width: 100%;
+        gap: 5px;
+    }
+}
+
+/* Медиазапрос для экранов с шириной меньше 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;   
+    }
 }
 

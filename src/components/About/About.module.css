@@ -1,0 +1,26 @@
+.contentWrapper {
+    display: flex;
+}
+
+
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+    max-width: 662px;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+.benefitsList {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefitsList li {
+    font-size: 20px;
+
+}

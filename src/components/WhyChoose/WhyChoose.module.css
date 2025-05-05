@@ -1,0 +1,16 @@
+.cardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--color-additional-bg);
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+.whyChooseTitle {
+    font-size: clamp(24px,2.08vw, 40px);
+}

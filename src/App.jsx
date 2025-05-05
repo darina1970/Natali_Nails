@@ -8,7 +8,7 @@ import { About } from './components/About/About';
 // import Portfolio from './components/Portfolio/Portfolio';
 // import Price from './components/Price/Price';
 // import Sterilization from './components/Sterilization/Sterilization';
-// import Certificate from './components/Certificate/Certificate';
+import { Certificate } from './components/Certificate/Certificate';
 // import Contacts from './components/Contacts/Contacts';
 // import Footer from './components/Footer/Footer';
 
@@ -20,10 +20,10 @@ function App() {
             <About />
             {/* <WhyChooseMe />
             <Portfolio />
-            <Price />
-            <Sterilization />
+            <Price /> */}
+            {/* <Sterilization /> */}
             <Certificate />
-            <Contacts />
+            {/* <Contacts />
             <Footer /> */}
         </div>
     );

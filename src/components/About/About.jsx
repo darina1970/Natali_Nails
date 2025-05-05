@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './About.module.css';
-import aboutImage from '../../assets/images/about-me-img.webp';
+import aboutImage from '../../assets/images/about-img.webp';
 
 
 

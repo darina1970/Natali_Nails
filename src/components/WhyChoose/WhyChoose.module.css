@@ -80,6 +80,9 @@
     .imageCard {
         max-height: 400px;
     }
+    .logoWrapper {
+        margin-bottom: 30px;
+    }
     .imageCard {
         overflow: hidden;
         border-radius: 20px;
@@ -88,4 +91,10 @@
         max-height: 400px;
     }
 
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
 }

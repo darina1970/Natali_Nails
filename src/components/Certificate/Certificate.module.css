@@ -45,6 +45,7 @@
 
 .slide {
     padding: 10px;
+    cursor: pointer;
 }
 
 .slide img {

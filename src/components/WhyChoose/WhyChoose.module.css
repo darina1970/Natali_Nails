@@ -92,3 +92,9 @@
     }
 
 }
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+}

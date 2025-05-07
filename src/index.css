@@ -145,6 +145,18 @@ h2, h3, h4, h5 {
     h2, h3, h4, h5 {
         margin-bottom: 40px;
     }
+    /* Цвет неактивной точки */
+    .slick-dots li button:before {
+    color: var(--color-btn);
+    opacity: 0.5;
+    font-size: 8px;
+    }
+    /* Цвет активной точки */
+    .slick-dots li.slick-active button:before {
+        color: var(--color-black);
+        opacity: 1;
+        font-size: 10px;
+    }
 }
 
 /* Медиазапрос для экранов с шириной меньше 480px (мобильные устройства) */

@@ -6,7 +6,7 @@ import icon2 from "../../assets/icons/sterilization-icons/icon2.png";
 import icon3 from "../../assets/icons/sterilization-icons/icon3.png";
 import icon4 from "../../assets/icons/sterilization-icons/icon4.png";
 
-const Sterilization = () => {
+export const Sterilization = () => {
   return (
     <section>
       <div className="container">
@@ -78,4 +78,4 @@ const Sterilization = () => {
   );
 };
 
-export default Sterilization;
+// export default Sterilization;

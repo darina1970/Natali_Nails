@@ -115,13 +115,6 @@ h2, h3, h4, h5 {
     margin-bottom: 90px;
 }
 
-/* Медиазапрос для экранов с шириной больше 1200px */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1400px; 
-        padding: 0 30px;  
-    }
-}
 
 /* Медиазапрос для экранов с шириной больше 1600px */
 @media (min-width: 1600px) {
@@ -130,6 +123,16 @@ h2, h3, h4, h5 {
         padding: 0 40px;   
     }
 }
+
+
+/* Медиазапрос для экранов с шириной больше 1200px */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px; 
+        padding: 0 30px;  
+    }
+}
+
 
 /* Медиазапрос для экранов с шириной меньше 768px (планшеты) */
 @media (max-width: 767px) {
@@ -141,6 +144,18 @@ h2, h3, h4, h5 {
     }
     h2, h3, h4, h5 {
         margin-bottom: 40px;
+    }
+    /* Цвет неактивной точки */
+    .slick-dots li button:before {
+    color: var(--color-btn);
+    opacity: 0.5;
+    font-size: 8px;
+    }
+    /* Цвет активной точки */
+    .slick-dots li.slick-active button:before {
+        color: var(--color-black);
+        opacity: 1;
+        font-size: 10px;
     }
 }
 

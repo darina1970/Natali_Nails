@@ -1,8 +1,7 @@
 import React from 'react';
 
 // Импорт компонентов
-// import Header from './components/Header/Header';
-// import Banner from './components/Banner/Banner';
+import Banner from './components/Banner/Banner';
 // import { About } from './components/About/About';
 // import WhyChooseMe from './components/WhyChoose/WhyChoose';
 // import Portfolio from './components/Portfolio/Portfolio';
@@ -15,8 +14,7 @@ import React from 'react';
 function App() {
     return (
         <div className="App">
-            {/* <Header />
-            <Banner /> */}
+            <Banner />
             {/* <About /> */}
             {/* <WhyChooseMe />
             <Portfolio />

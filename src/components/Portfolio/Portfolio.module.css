@@ -24,13 +24,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .arrowLeftBtn:hover,
 .arrowRightBtn:hover {
     background-color: var(--color-black);
-    transition: scale(1.1);
+    transform: scale(1.1);
 }
 
 .arrowLeftBtn img,
@@ -46,36 +46,28 @@
 .slide {
     height: 520px;
     padding: 0 10px;
-    cursor: grab !important;
     overflow: hidden;
     outline: none;
-}
-
-.slide:active {
-    cursor: grabbing !important;
+    cursor: pointer;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 20px;
+    object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .customArrows {
-        right: 50%;
-        transform: translateX(50%);
-        top: -20px;
+        display: none;
     }
 
-    .arrowLeftBtn,
-    .arrowRightBtn {
-        width: 40px;
-        height: 40px;
+    .sliderWrapper {
+        padding-top: 0px;
     }
 
     .slide {
-        height: 300px;
+        height: 350px;
     }
 }

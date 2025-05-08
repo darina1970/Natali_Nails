@@ -1,7 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import Lightbox from "yet-another-react-lightbox";
+import {
+  Thumbnails,
+  Zoom,
+  Fullscreen,
+  Counter,
+} from "yet-another-react-lightbox/plugins";
+import "yet-another-react-lightbox/styles.css";
+import "./lightbox-overrides.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/plugins/counter.css";
+
 import styles from "../Portfolio/Portfolio.module.css";
+
 import portfolio1 from "../../assets/images/portfolio-items/portfolio-img1.webp";
 import portfolio2 from "../../assets/images/portfolio-items/portfolio-img2.webp";
 import portfolio3 from "../../assets/images/portfolio-items/portfolio-img3.webp";
@@ -12,11 +25,27 @@ import portfolio7 from "../../assets/images/portfolio-items/portfolio-img7.webp"
 import portfolio8 from "../../assets/images/portfolio-items/portfolio-img8.webp";
 import portfolio9 from "../../assets/images/portfolio-items/portfolio-img9.webp";
 import portfolio10 from "../../assets/images/portfolio-items/portfolio-img10.webp";
+
 import arrowLeft from "../../assets/icons/arrows/arrow-left.svg";
 import arrowRight from "../../assets/icons/arrows/arrow-right.svg";
 
+const portfolios = [
+  { src: portfolio1 },
+  { src: portfolio2 },
+  { src: portfolio3 },
+  { src: portfolio4 },
+  { src: portfolio5 },
+  { src: portfolio6 },
+  { src: portfolio7 },
+  { src: portfolio8 },
+  { src: portfolio9 },
+  { src: portfolio10 },
+];
+
 export const Portfolio = () => {
   const sliderRef = useRef(null);
+  const [lightboxOpen, setLightBoxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const settings = {
     infinite: true,
@@ -30,16 +59,16 @@ export const Portfolio = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
+          arrows: false,
+          dots: true,
         },
       },
       {
         breakpoint: 575,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
+          arrows: false,
+          dots: true,
         },
       },
     ],
@@ -64,40 +93,33 @@ export const Portfolio = () => {
               <img src={arrowRight} alt="Стрелка вправо" />
             </button>
           </div>
+
           <Slider ref={sliderRef} {...settings}>
-            <div className={styles.slide}>
-              <img src={portfolio1} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio2} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio3} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio4} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio5} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio6} alt="Педикюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio7} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio8} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio9} alt="Маникюр" />
-            </div>
-            <div className={styles.slide}>
-              <img src={portfolio10} alt="Педикюр" />
-            </div>
+            {portfolios.map((item, index) => (
+              <div
+                key={index}
+                className={styles.slide}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setLightBoxOpen(true);
+                }}
+              >
+                <img src={item.src} alt={`Маникюр ${index + 1}`} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        index={currentIndex}
+        close={() => setLightBoxOpen(false)}
+        slides={portfolios}
+        plugins={[Thumbnails, Zoom, Fullscreen, Counter]}
+        thumbnails={{ position: "bottom", width: 100, height: 60 }}
+        zoom={{ zoomInButton: true, zoomOutButton: true }}
+      />
     </section>
   );
 };

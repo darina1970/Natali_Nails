@@ -6,7 +6,7 @@ import React from "react";
 import { About } from "./components/About/About";
 import { WhyChoose } from "./components/WhyChoose/WhyChoose";
 import { Portfolio } from "./components/Portfolio/Portfolio";
-// import Price from './components/Price/Price';
+import { Price } from "./components/Price/Price";
 import { Sterilization } from "./components/Sterilization/Sterilization";
 import { Certificate } from "./components/Certificate/Certificate";
 import { Contacts } from "./components/Contacts/Contacts";
@@ -20,7 +20,7 @@ function App() {
       <About />
       <WhyChoose />
       <Portfolio />
-      {/* <Price /> */}
+      <Price />
       <Sterilization />
       <Certificate />
       <Contacts />

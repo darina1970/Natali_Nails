@@ -15,8 +15,8 @@ import { Contacts } from "./components/Contacts/Contacts";
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-            <Banner /> */}
+      {/* <Header /> */}
+      {/* <Banner /> */}
       <About />
       <WhyChoose />
       {/* <Portfolio />

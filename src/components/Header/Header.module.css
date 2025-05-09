@@ -3,11 +3,12 @@
     flex-direction: column;
     width: 100%;
     position: relative;
+    padding-bottom: 40px;
 }
 
 .headerMainNav {
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,15 +42,16 @@
     align-items: center;
     width: 100%;
     min-height: 500px;
-    padding: 40px 0;
+    padding: 0;
 }
 
 .headerMainLeft {
-    width: 50%;
+    width: 600px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+    justify-content: flex-start;
+    gap: 60px;
 }
 
 .headerMainLeft h1 {
@@ -81,7 +83,7 @@
     align-self: flex-start;
     border: none;
     cursor: pointer;
-    margin-top: auto;
+    margin-top: 85px;
 }
 
 .headerMainRight {

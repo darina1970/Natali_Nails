@@ -5,8 +5,8 @@ import React from "react";
 // import Banner from './components/Banner/Banner';
 import { About } from "./components/About/About";
 import { WhyChoose } from "./components/WhyChoose/WhyChoose";
-// import Portfolio from './components/Portfolio/Portfolio';
-// import Price from './components/Price/Price';
+import { Portfolio } from "./components/Portfolio/Portfolio";
+import { Price } from "./components/Price/Price";
 import { Sterilization } from "./components/Sterilization/Sterilization";
 import { Certificate } from "./components/Certificate/Certificate";
 import { Contacts } from "./components/Contacts/Contacts";
@@ -19,8 +19,8 @@ function App() {
       {/* <Banner /> */}
       <About />
       <WhyChoose />
-      {/* <Portfolio />
-            <Price /> */}
+      <Portfolio />
+      <Price />
       <Sterilization />
       <Certificate />
       <Contacts />

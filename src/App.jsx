@@ -10,7 +10,7 @@ import { WhyChoose } from "./components/WhyChoose/WhyChoose";
 import { Sterilization } from "./components/Sterilization/Sterilization";
 import { Certificate } from "./components/Certificate/Certificate";
 import { Contacts } from "./components/Contacts/Contacts";
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Sterilization />
       <Certificate />
       <Contacts />
-      {/*<Footer /> */}
+      <Footer />
     </div>
   );
 }

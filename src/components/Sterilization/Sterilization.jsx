@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Sterilization.module.css";
 import sterilization from "../../assets/images/sterilization-img.webp";
-import icon1 from "../../assets/icons/sterilization-icons/icon1.png";
-import icon2 from "../../assets/icons/sterilization-icons/icon2.png";
-import icon3 from "../../assets/icons/sterilization-icons/icon3.png";
-import icon4 from "../../assets/icons/sterilization-icons/icon4.png";
+import icon1 from "../../assets/icons/sterilization-icons/icon1.svg";
+import icon2 from "../../assets/icons/sterilization-icons/icon2.svg";
+import icon3 from "../../assets/icons/sterilization-icons/icon3.svg";
+import icon4 from "../../assets/icons/sterilization-icons/icon4.svg";
 
 export const Sterilization = () => {
   return (

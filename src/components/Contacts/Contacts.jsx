@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Contacts.module.css";
-import iconTg from "../../assets/icons/social-icons/tg-light.png";
-import iconInst from "../../assets/icons/social-icons/insta-light.png";
+import iconTg from "../../assets/icons/social-icons/tg-light.svg";
+import iconInst from "../../assets/icons/social-icons/insta-light.svg";
 
 export const Contacts = () => {
   return (

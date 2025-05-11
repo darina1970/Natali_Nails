@@ -5,7 +5,7 @@ import priceImage2 from "../../assets/images/price-items/price-img2.webp";
 
 export const Price = () => {
   return (
-    <section>
+    <section id="price">
       <div className="container">
         <h2>Прайс</h2>
         <div className={styles.wrapper}>

@@ -8,7 +8,7 @@ import icon4 from "../../assets/icons/sterilization-icons/icon4.svg";
 
 export const Sterilization = () => {
   return (
-    <section>
+    <section id="sterilization">
       <div className="container">
         <h2>Стерилизация - мой главный приоритет</h2>
         <div className={styles.sterilization}>

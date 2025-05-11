@@ -6,7 +6,7 @@ import aboutImage from '../../assets/images/about-img.webp';
 
 export const About = () => {
     return (
-        <section>
+        <section id="about">
             <div className="container">
                 <h2>Обо мне</h2>
                 <div className={styles.contentWrapper}>

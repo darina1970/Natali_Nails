@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/logo/logo-light.png";
 import telegramIcon from "../../assets/icons/social-icons/tg-dark.png";
@@ -6,7 +6,39 @@ import instagramIcon from "../../assets/icons/social-icons/insta-dark.png";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuItems = ["Обо мне", "Прайс", "Портфолио", "Стерилизация", "Контакты"];
+  const menuItems = [
+    { label: "Обо мне", anchor: "about" },
+    { label: "Прайс", anchor: "price" },
+    { label: "Портфолио", anchor: "portfolio" },
+    { label: "Стерилизация", anchor: "sterilization" },
+    { label: "Контакты", anchor: "contacts" },
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        !e.target.closest (`.${styles.mobileNav}`) && 
+        !e.target.closest(`.${styles.burgerMenu}`)
+      ) {
+          setMenuOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [menuOpen]);
 
   return (
     <header className={styles.header}>
@@ -20,7 +52,7 @@ export const Header = () => {
             <nav className={styles.nav}>
               <ul>
                 {menuItems.map((item, index) => (
-                  <li key={index}><a href="#">{item}</a></li>
+                  <li key={index}><a href={`#${item.anchor}`}>{item.label}</a></li>
                 ))}
               </ul>
             </nav>
@@ -28,37 +60,32 @@ export const Header = () => {
             <div
               className={`${styles.burgerMenu} ${menuOpen ? styles.open : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}>
-              <div className={styles.burgerLine}></div>
-              <div className={styles.burgerLine}></div>
-              <div className={styles.burgerLine}></div>
+              <div className={`${styles.burgerLine} ${menuOpen ? styles.line1 : ''}`}></div>
+              <div className={`${styles.burgerLine} ${menuOpen ? styles.line2 : ''}`}></div>
+              <div className={`${styles.burgerLine} ${menuOpen ? styles.line3 : ''}`}></div>
             </div>
+
+            {menuOpen && (
+              <div className={styles.overlay} onClick={() => setMenuOpen(false)}></div>
+            )}
 
             <nav className={`${styles.mobileNav} ${menuOpen ? styles.show : ""}`}>
               <ul>
                 {menuItems.map((item, index) => (
-                  <li key={index}><a href="#">{item}</a></li>
+                  <li key={index}><a href={`#${item.anchor}`} onClick={() => setMenuOpen(false)}>{item.label}</a></li>
                 ))}
               </ul>
             </nav>
           </div>
 
-          {menuOpen && (
-            <nav className={styles.mobileNav}>
-              <ul>
-                {menuItems.map((item, index) => (
-                  <li key={index}><a href="#">{item}</a></li>
-                ))}
-              </ul>
-            </nav>
-          )}
-
           <div className={styles.headerMainContent}>
             <div className={styles.headerMainLeft}>
               <h1>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
               <p>Профессиональная работа с гарантией безопасности. Современный подход и качественные материалы.</p>
-              <a href="#" className={styles.button}>Записаться</a>
+              <a href="https://t.me/natulik2024" className={styles.button}>Записаться</a>
             </div>
             <div className={styles.headerMainRight}>
+
               <div className={styles.iconsContainer}>
                 <div className={styles.iconWrapper}>
                   <a href="https://t.me/natulik2024" target="_blank" rel="noopener noreferrer">
@@ -74,6 +101,7 @@ export const Header = () => {
               <img className={styles.headerImage} src="../../../src/assets/images/master-photo.webp" alt="" />
               <p className={styles.disclaimer}>*Социальная сеть Instagram запрещена на территории Беларуси</p>
             </div>
+            <h1 className={styles.hiddenTitle}>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
           </div>
         </div>
       </div>                   

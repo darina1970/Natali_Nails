@@ -75,7 +75,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <section>
+    <section id="portfolio">
       <div className="container">
         <h2 className={styles.sliderTitle}>Вдохновляйтесь моим творчеством</h2>
         <div className={styles.sliderWrapper}>

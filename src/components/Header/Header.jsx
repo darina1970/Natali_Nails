@@ -1,45 +1,47 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/logo/logo-light.png";
-import masterPhoto from "../../assets/images/master-photo.webp";
 import telegramIcon from "../../assets/icons/social-icons/tg-dark.png";
 import instagramIcon from "../../assets/icons/social-icons/insta-dark.png";
 
-const menuItems = ["Обо мне", "Прайс", "Портфолио", "Материалы", "Стерилизация", "Контакты"];
-
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuItems = ["Обо мне", "Прайс", "Портфолио", "Стерилизация", "Контакты"];
 
   return (
     <header className={styles.header}>
       <div className="container">
         <div className={styles.headerMain}>
-           <div className={styles.headerMainNav}>
-              <div className={styles.logo}>
-                <img src={logo} alt="Логотип" />
-              </div>
+          <div className={styles.headerMainNav}>
+            <div className={styles.logo}>
+              <img src={logo} alt="Логотип" />
+            </div>
 
-              {/* 🔹 Обычное меню (только на десктопе) */}
-              <nav className={styles.nav}>
-                <ul>
-                  {menuItems.map((item, index) => (
-                    <li key={index}><a href="#">{item}</a></li>
-                  ))}
-                </ul>
-              </nav>
+            <nav className={styles.nav}>
+              <ul>
+                {menuItems.map((item, index) => (
+                  <li key={index}><a href="#">{item}</a></li>
+                ))}
+              </ul>
+            </nav>
+            
+            <div
+              className={`${styles.burgerMenu} ${menuOpen ? styles.open : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}>
+              <div className={styles.burgerLine}></div>
+              <div className={styles.burgerLine}></div>
+              <div className={styles.burgerLine}></div>
+            </div>
 
-              {/* 🔹 Бургер-меню (только на мобильных) */}
-              <div 
-                className={`${styles.burgerMenu} ${menuOpen ? styles.open : ""}`} 
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                <div className={styles.burgerLine}></div>
-                <div className={styles.burgerLine}></div>
-                <div className={styles.burgerLine}></div>
-              </div>
+            <nav className={`${styles.mobileNav} ${menuOpen ? styles.show : ""}`}>
+              <ul>
+                {menuItems.map((item, index) => (
+                  <li key={index}><a href="#">{item}</a></li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
-          {/* 🔹 Выпадающее мобильное меню */}
           {menuOpen && (
             <nav className={styles.mobileNav}>
               <ul>
@@ -52,11 +54,10 @@ export const Header = () => {
 
           <div className={styles.headerMainContent}>
             <div className={styles.headerMainLeft}>
-                <h1>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
-                <p>Профессиональная работа с гарантией безопасности. Современный подход и качественные материалы.</p>
-                <button className={styles.button}>Записаться</button> 
+              <h1>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
+              <p>Профессиональная работа с гарантией безопасности. Современный подход и качественные материалы.</p>
+              <a href="#" className={styles.button}>Записаться</a>
             </div>
-
             <div className={styles.headerMainRight}>
               <div className={styles.iconsContainer}>
                 <div className={styles.iconWrapper}>
@@ -70,7 +71,7 @@ export const Header = () => {
                   </a>
                 </div>
               </div>
-              <img className={styles.headerImage} src={masterPhoto} alt="Портрет мастера" />
+              <img className={styles.headerImage} src="../../../src/assets/images/master-photo.webp" alt="" />
               <p className={styles.disclaimer}>*Социальная сеть Instagram запрещена на территории Беларуси</p>
             </div>
           </div>
@@ -79,3 +80,5 @@ export const Header = () => {
     </header>
   );
 };
+
+

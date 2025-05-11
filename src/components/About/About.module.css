@@ -38,16 +38,22 @@
 }
 
 @media (max-width: 767px) {
-    .contentWrapper {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
     .imageWrapper {
         width: 100%;
     }
     .benefitsList {
         width: 100%;
         gap: 15px;
+    }
+    .aboutImage {
+        height: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .contentWrapper {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
 

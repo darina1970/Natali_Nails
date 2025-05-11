@@ -9,7 +9,6 @@
 
 .footerContainer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -80,13 +79,7 @@
     }
 
     .nav {
-        order: 2;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        display: none;
     }
 
     .scrollUp {

@@ -6,7 +6,7 @@ import upIcon from "../../assets/icons/arrows/arrow-top.png";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className="footerContainer">
         <img src={logoDark} alt="Логотип Natali" className={styles.logo} />
         <nav className={styles.nav}>
           <ul>

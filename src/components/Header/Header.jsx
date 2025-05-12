@@ -32,6 +32,7 @@ export const Header = () => {
 
     if (menuOpen) {
       document.addEventListener('click', handleClickOutside);
+      window.addEventListener('scroll', handleScroll);
     }
 
     return () => {

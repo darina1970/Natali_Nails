@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import logoDark from "../../assets/logo/logo-dark.png";
-import upIcon from "../../assets/icons/arrows/arrow-top.png"; 
+import upIcon from "../../assets/icons/arrows/arrow-top.svg"; 
 
 const Footer = () => {
   return (

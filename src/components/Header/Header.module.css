@@ -48,9 +48,6 @@
 
 .nav li:hover {
     transform: scale(1.1);
-}
-
-.nav li {
     cursor: pointer;
 }
 
@@ -88,7 +85,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 20px 0;
+    padding: 0;
     min-height: 500px;
 }
 
@@ -218,31 +215,52 @@
         justify-content: flex-end;
     }
 
+    .headerMainLeft {
+        padding-top: 0;
+    }
+
     .headerMainLeft h1 {
         font-size: 30px;
         padding-top: 0px;
+        margin-top: 0px;
         margin-bottom: 60px;
         margin-top: 20px;
     }
 
-    .headerMainLeft p {
-        font-size: 20px;
-        margin-bottom: 0;
-    }
-
     .button {
-        max-width: 100%;
-        /* margin-top: 10px; */
-    }
-}
-
-@media (max-width: 1120px) {
-    .headerMainLeft {
-        padding-top: 20px;
-        padding-right: 20px;
-    }
-    .benefitsList {
-        margin-bottom: 20px;
+        width: 100%;
+        margin-top: 30px;
+        @media (max-width: 1300px) {
+            .headerMainNav {
+                position: unset;
+                width: 100%;
+                justify-content: space-between;
+                padding-right: 0;
+            }
+        
+            .nav ul {
+                flex-wrap: nowrap;
+                gap: 40px;
+                justify-content: flex-end;
+            }
+        
+            .headerMainLeft {
+                padding-top: 0;
+            }
+        
+            .headerMainLeft h1 {
+                font-size: 30px;
+                padding-top: 0px;
+                margin-top: 30px;
+                margin-bottom: 60px;
+            }
+        
+            .button {
+                width: 100%;
+                margin-top: auto;
+                align-self: flex-end;
+            }
+        }
     }
 }
 
@@ -362,6 +380,10 @@
 
     .mobileNav.show {
         display: flex;
+    }
+
+    .button {
+        padding: 20px;
     }
 }
 

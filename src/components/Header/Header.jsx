@@ -88,16 +88,16 @@ export const Header = () => {
             <div className={styles.headerMainRight}>
 
               <div className={styles.iconsContainer}>
-                <div className={styles.iconWrapper}>
-                  <a href="https://t.me/natulik2024" target="_blank" rel="noopener noreferrer">
+                {/* <div className={styles.iconWrapper}> */}
+                  <a className={styles.iconWrapper} href="https://t.me/natulik2024" target="_blank" rel="noopener noreferrer">
                     <img src={telegramIcon} alt="Telegram" className={styles.icon} />
                   </a>
-                </div>
-                <div className={styles.iconWrapper}>
-                  <a href="https://www.instagram.com/_n.a.t.a.s.h.ka_/" target="_blank" rel="noopener noreferrer">
+                {/* </div> */}
+                {/* <div className={styles.iconWrapper}> */}
+                  <a className={styles.iconWrapper} href="https://www.instagram.com/_n.a.t.a.s.h.ka_/" target="_blank" rel="noopener noreferrer">
                     <img src={instagramIcon} alt="Instagram" className={styles.icon} />
                   </a>
-                </div>
+                {/* </div> */}
               </div>
               <img className={styles.headerImage} src="../../../src/assets/images/master-photo.webp" alt="" />
               <p className={styles.disclaimer}>*Социальная сеть Instagram запрещена на территории Беларуси</p>

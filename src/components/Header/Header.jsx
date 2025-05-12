@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import logo from "../../assets/logo/logo-light.png";
-import telegramIcon from "../../assets/icons/social-icons/tg-dark.png";
-import instagramIcon from "../../assets/icons/social-icons/insta-dark.png";
+import logo from "../../assets/logo/logo-light.svg";
+import telegramIcon from "../../assets/icons/social-icons/tg-dark.svg";
+import instagramIcon from "../../assets/icons/social-icons/insta-dark.svg";
 import checkIcon from "../../assets/check-icon.svg";
 
 export const Header = () => {

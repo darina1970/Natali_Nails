@@ -26,24 +26,22 @@ export const Contacts = () => {
             <div className={styles.socials}>
               <p className={styles.socialsTitle}>Связаться со мной:</p>
               <div className={styles.socialsIcons}>
-                <div className={styles.iconTg}>
-                  <a
+                <a
+                    className={styles.iconTg}
                     href="https://t.me/natulik2024"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={iconTg} alt="Telegram" />
-                  </a>
-                </div>
-                <div className={styles.iconInst}>
-                  <a
-                    href="https://www.instagram.com/_n.a.t.a.s.h.ka_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={iconInst} alt="Instagram" />
-                  </a>
-                </div>
+                </a>
+                <a
+                  className={styles.iconInst}
+                  href="https://www.instagram.com/_n.a.t.a.s.h.ka_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={iconInst} alt="Instagram" />
+                </a>
               </div>
             </div>
           </div>

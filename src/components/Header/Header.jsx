@@ -84,10 +84,10 @@ export const Header = () => {
             <div className={styles.headerMainLeft}>
               <h1>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
               <ul className={styles.benefitsList}>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Профессиональная работа</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Гарантия безопасности</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Современный подход</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Качественные материалы</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Профессиональная работа</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Гарантия безопасности</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Современный подход</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Качественные материалы</li>
               </ul>
               <a href="https://t.me/natulik2024" className={styles.button} target="_blank" rel="noopener noreferrer">Записаться</a>
             </div>

@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/logo/logo-light.png";
@@ -84,4 +82,3 @@ export const Header = () => {
 };
 
 
->>>>>>> Stashed changes

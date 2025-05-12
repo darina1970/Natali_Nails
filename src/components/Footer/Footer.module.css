@@ -17,8 +17,8 @@
 }
 
 .logo {
-    height: 80px;
-    width: 215px;
+    height: 75px;
+    width: 205px;
     object-fit: contain;
 }
 
@@ -40,8 +40,8 @@
 .nav a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -63,29 +63,50 @@
 }
 
 .scrollUp img {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+@media (max-width: 900px) {
+    .nav a {
+        font-size: 12px;
+        font-weight: 300;
+    }
 }
 
 @media (max-width: 767px) {
-    .container {
+    .footer {
+        height: auto;
+    }
+
+    .footerContainer {
+        display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
     }
 
     .logo {
-        order: 1;
+        order: -1;
+        margin: 20px;
+    }
+    
+    .nav {
+        order: 2;
     }
 
-    .nav {
-        display: none;
-    }
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0px 40px;
+       }
 
     .scrollUp {
-        order: 3;
-        position: absolute;
-        right: 15px;
-        bottom: 20px;
-    }
+        display: none;
+}
 }

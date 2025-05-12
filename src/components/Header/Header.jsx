@@ -59,6 +59,7 @@ export const Header = () => {
               </ul>
             </nav>
             
+            <div className={styles.burgerClickZone}></div>
             <div
               className={`${styles.burgerMenu} ${menuOpen ? styles.open : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}>

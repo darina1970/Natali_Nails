@@ -342,7 +342,7 @@
         position: fixed;
         top: 80px;
         right: 15px;
-        width: 40%;
+        /* width: 40%; */
         background-color: var(--color-additional-bg);
         padding: 20px;
         border-radius: 5px;

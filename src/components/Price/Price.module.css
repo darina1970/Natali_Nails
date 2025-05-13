@@ -50,6 +50,9 @@
 .button {
     padding: 30px 60px;
     width: max-content;
+    border-radius: 10px;
+    background-color: #7E7E7E;
+    color: #fff;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 

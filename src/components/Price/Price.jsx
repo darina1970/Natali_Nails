@@ -56,7 +56,13 @@ export const Price = () => {
                   </div>
                 </li>
               </ul>
-              <button className={styles.button}>Записаться</button>
+              <a
+                href="https://t.me/natulik2024"
+                className={styles.button}
+                target="_blank"
+              >
+                Записаться
+              </a>
             </div>
           </div>
           <div className={styles.contentWrapper}>
@@ -75,7 +81,13 @@ export const Price = () => {
                   </div>
                 </li>
               </ul>
-              <button className={styles.button}>Записаться</button>
+              <a
+                href="https://t.me/natulik2024"
+                className={styles.button}
+                target="_blank"
+              >
+                Записаться
+              </a>
             </div>
             <div className={styles.imageWrapper}>
               <img

@@ -29,7 +29,7 @@
 
 .arrowLeftBtn:hover,
 .arrowRightBtn:hover {
-    background-color: var(--color-black);
+    background-color: var(--color-btn);
     transform: scale(1.1);
 }
 

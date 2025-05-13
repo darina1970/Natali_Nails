@@ -1,0 +1,126 @@
+.footer {
+    height: 120px;
+    background-color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.logo {
+    height: 75px;
+    width: 205px;
+    object-fit: contain;
+}
+
+.nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav li {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.scrollUp {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.scrollUp:hover {
+    transform: scale(1.1);
+    background-color: var(--color-white);
+}
+
+.scrollUp img {
+    width: 10px;
+    height: 10px;
+}
+
+@media (max-width: 900px) {
+    .nav a {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        height: auto;
+    }
+
+    .footerContainer {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        order: -1;
+        margin: 20px;
+    }
+    
+    .nav {
+        order: 2;
+    }
+
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0px 40px;
+    }
+
+    .scrollUp {
+        display: none;
+}
+}

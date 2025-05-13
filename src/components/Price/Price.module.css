@@ -1,0 +1,113 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.imageWrapper {
+    width: calc((100% - 50px) / 2);
+}
+
+.priceImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.priceListWrapper {
+    width: calc((100% - 50px) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.priceList {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.priceItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7E7E7E;
+}
+
+.price {
+    flex-shrink: 0;
+}
+
+.button {
+    padding: 30px 60px;
+    width: max-content;
+    border-radius: 10px;
+    background-color: #7E7E7E;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #606060;
+    color: #fff;
+}
+
+@media (max-width: 1199px) {
+    .priceList {
+        gap: 20px;
+    }
+
+    .priceItem {
+        padding-bottom: 5px;
+    }
+
+    .button {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .priceListWrapper {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        gap: 50px;
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contentWrapper:last-child {
+        flex-direction: column-reverse;
+    }
+
+    .imageWrapper {
+        width: 100%;
+    }
+
+    .priceListWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -59,6 +59,12 @@
   width: clamp(40px, 8vw, 60px);
   height: clamp(40px, 8vw, 60px);
   background-color: var(--color-black);
+  transition: transform 0.3s ease;
+}
+
+.iconTg:hover,
+.iconInst:hover {
+  transform: scale(1.1);
 }
 
 .iconTg img,

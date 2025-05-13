@@ -31,6 +31,10 @@
     line-height: 1;
 }
 
+/* span {
+    font-weight: var(--font-weight-semibold);
+} */
+
 @media (max-width: 1199px) {
     .contentWrapper {
         gap: 40px;

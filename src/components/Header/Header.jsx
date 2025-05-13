@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import logo from "../../assets/logo/logo-light.png";
-import telegramIcon from "../../assets/icons/social-icons/tg-dark.png";
-import instagramIcon from "../../assets/icons/social-icons/insta-dark.png";
+import logo from "../../assets/logo/logo-light.svg";
+import telegramIcon from "../../assets/icons/social-icons/tg-dark.svg";
+import instagramIcon from "../../assets/icons/social-icons/insta-dark.svg";
 import checkIcon from "../../assets/check-icon.svg";
 
 export const Header = () => {
@@ -59,6 +59,7 @@ export const Header = () => {
               </ul>
             </nav>
             
+            <div className={styles.burgerClickZone}></div>
             <div
               className={`${styles.burgerMenu} ${menuOpen ? styles.open : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}>
@@ -84,10 +85,10 @@ export const Header = () => {
             <div className={styles.headerMainLeft}>
               <h1>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
               <ul className={styles.benefitsList}>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Профессиональная работа</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Гарантия безопасности</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Современный подход</li>
-              <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Качественные материалы</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Профессиональная работа</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Гарантия безопасности</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Современный подход</li>
+                <li><img src={checkIcon} alt="" className={styles.checkIcon} /> Качественные материалы</li>
               </ul>
               <a href="https://t.me/natulik2024" className={styles.button} target="_blank" rel="noopener noreferrer">Записаться</a>
             </div>

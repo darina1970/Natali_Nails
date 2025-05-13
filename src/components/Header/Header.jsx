@@ -107,7 +107,6 @@ export const Header = () => {
                 {/* </div> */}
               </div>
               <img className={styles.headerImage} src="../../../src/assets/images/master-photo.webp" alt="" />
-              <p className={styles.disclaimer}>*Социальная сеть Instagram запрещена на территории Беларуси</p>
             </div>
             <h1 className={styles.hiddenTitle}>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
           </div>

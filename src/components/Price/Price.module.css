@@ -50,6 +50,13 @@
 .button {
     padding: 30px 60px;
     width: max-content;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #606060;
+    color: #fff;
 }
 
 @media (max-width: 1199px) {

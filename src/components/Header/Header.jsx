@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
+import HeaderImage from "../../assets/images/master-photo.webp";
 import logo from "../../assets/logo/logo-light.svg";
 import telegramIcon from "../../assets/icons/social-icons/tg-dark.svg";
 import instagramIcon from "../../assets/icons/social-icons/insta-dark.svg";
@@ -106,7 +107,7 @@ export const Header = () => {
                   </a>
                 {/* </div> */}
               </div>
-              <img className={styles.headerImage} src="../../../src/assets/images/master-photo.webp" alt="" />
+              <img className={styles.headerImage} src={HeaderImage} alt="" />
             </div>
             <h1 className={styles.hiddenTitle}>ИДЕАЛЬНЫЙ МАНИКЮР СО СТОЙКИМ ПОКРЫТИЕМ</h1>
           </div>

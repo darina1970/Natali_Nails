@@ -111,4 +111,7 @@
   .socials {
     gap: 16px;
   }
+  .contacts {
+    margin-bottom: 60px;
+  }
 }

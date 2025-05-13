@@ -4,7 +4,7 @@ import iconInst from "../../assets/icons/social-icons/insta-light.svg";
 
 export const Contacts = () => {
   return (
-    <section id="contacts">
+    <section className={styles.contacts} id="contacts">
       <div className="container">
         <h2>Контакты</h2>
         <div className={styles.contactsContent}>

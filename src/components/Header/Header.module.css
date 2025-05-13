@@ -46,7 +46,7 @@
 }
 
 .nav li {
-    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .nav li:hover {
@@ -58,7 +58,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    /* font-size: 25px; */
     font-size: clamp(18px, 1.66vw, 32px);
     line-height: 1.5;
     display: flex;
@@ -100,7 +99,6 @@
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     z-index: 3;
 }
 
@@ -221,47 +219,14 @@
     .headerMainLeft h1 {
         font-size: 30px;
         padding-top: 0px;
-        margin-top: 0px;
+        margin-top: 60px;
         margin-bottom: 60px;
-        margin-top: 20px;
     }
+}
 
+@media (max-width: 1024px) {
     .button {
         width: 100%;
-        margin-top: 30px;
-        @media (max-width: 1300px) {
-            .headerMainNav {
-                position: unset;
-                width: 100%;
-                justify-content: space-between;
-                padding-right: 0;
-            }
-        
-            .nav ul {
-                flex-wrap: nowrap;
-                gap: 40px;
-                justify-content: flex-end;
-            }
-        
-            .headerMainLeft {
-                padding-top: 0;
-            }
-        
-            .headerMainLeft h1 {
-                font-size: 30px;
-                padding-top: 0px;
-                margin-top: 30px;
-                margin-bottom: 60px;
-            }
-        
-            .button {
-                width: 100%;
-                margin-top: auto;
-                align-self: flex-end;
-            }
-        }
-    }
-    .button {
         height: 80px;
     }
 }
@@ -277,12 +242,20 @@
 
     .benefitsList {
         font-size: 16px;
+        padding-bottom: 20px;
     }
 
     .headerMainNav {
         width: 100%;
         justify-content: space-between;
         padding-right: 0;
+    }
+    .headerMainLeft {
+        padding-right: 20px;
+    }
+
+    .headerMainLeft h1 {
+        margin-bottom: 40px;
     }
 
     .logo img {

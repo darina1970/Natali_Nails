@@ -43,7 +43,10 @@
     font-weight: 400;
     font-size: 15px;
     font-family: Roboto;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav li {
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 .nav li:hover {
@@ -194,11 +197,6 @@
 
 .hiddenTitle {
     display: none;
-}
-
-.disclaimer {
-    font-size: 10px;
-    color: var(--color-btn);
 }
 
 @media (max-width: 1300px) {
